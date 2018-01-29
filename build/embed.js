@@ -11259,7 +11259,13 @@ SceneInfo.loadFromGetParams = function() {
     params[camelCase] = Util.getQueryParameter(underscore)
                         || ((window.WebVRConfig && window.WebVRConfig.PLAYER) ? window.WebVRConfig.PLAYER[underscore] : "");
   }
+  
+  
+  params.image = 'IMG_0254.JPG';
+  
   console.log('load from get params: ', params);
+  
+  
   var scene = new SceneInfo(params);
   if (!scene.isValid()) {
     console.warn('Invalid scene: %s', scene.errorMessage);
